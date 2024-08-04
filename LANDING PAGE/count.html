@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Reversal of a number</title></head>
+<body>
+<script>
+function reverse(str)
+{
+var num, rev=0, rem;
+num = parseInt(str);
+while(num!=0)
+{
+rem = num%10;
+rev=rev * 10 + rem; 
+num = parseInt(num/10);
+}
+return(rev);
+}
+var str = prompt("Enter a number: ");
+if(str.length==0)
+alert("Number cannot be empty!!!");
+else if(isNaN(str))
+alert("Invalid number");
+else
+rev = reverse(str);
+alert("Reverse of " + str + " is " + rev);
+</script>
+</body>
+</html>
